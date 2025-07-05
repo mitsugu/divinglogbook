@@ -362,3 +362,12 @@ div#notes p {
 div#notes p:first-child {
 	text-indent:0em;
 }
+.loglist dd {
+    display: none;
+}
+.loglist dt {
+    cursor: pointer;
+}
+.loglist dd.active {
+    display: block;
+}
