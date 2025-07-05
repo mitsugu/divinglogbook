@@ -1,0 +1,295 @@
+:root {
+    --grid-column-width: 25vw;
+    --grid-row-height: 20vmin;
+}
+body {
+	margin-bottom:6em;
+}
+.date-container {
+    display: grid;
+    grid-template-columns: 10em 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    margin: 0 auto; /* 中央寄せ */
+    border-top: 1px solid black; /* 全体の枠線（デバッグ用） */
+}
+/* 各ボックスの基本スタイル */
+.box {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+.top-left-box {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.top-middle-box {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.bottom-left-box {
+	border-right:1px solid black;
+}
+.bottom-middle-box {
+	border-right:1px solid black;
+}
+/* 上部の横長の箱 */
+.top-box {
+    grid-column: 1 / span 2;
+}
+/* 下の左側の箱 */
+.bottom-left-box {
+    grid-column: 1;
+}
+.bottom-right-box {
+    grid-column: 2;
+}
+
+.data1 {
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+	padding-left:0.2em;
+	padding-right:0.2em;
+}
+.temp {
+	text-align:center;
+    grid-column: 1 / span 3;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.temp-title {
+	border-right: 1px solid black;
+	text-align:center;
+}
+.temp-data {
+	border-right: 1px solid black;
+	text-align:center;
+}
+.temp-unit{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align:right;
+}
+.vis{
+	text-align:center;
+    grid-column: 4 / span 3;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.bar {
+	text-align:center;
+    grid-column: 7 / span 2;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.depth {
+	text-align:center;
+    grid-column: 9 / span 2;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.time{
+	text-align:center;
+    grid-column: 11 / span 4;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.sign{
+	text-align:center;
+    grid-column: 15 / span 1;
+}
+.sign-data {
+	border-bottom: 1px solid black;
+}
+
+/* ダイビングプロファイル */
+.diving-profile {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    width: 100%;
+    margin: 0 auto;
+	padding-top:1em;
+	border-bottom: 1px solid black;
+}
+.log-box, .pd-box {
+    padding: 15px;
+    text-align: center;
+    min-height: var(--grid-row-height);
+}
+.lg {
+	text-decoration:underline;
+}
+.sit {
+	text-decoration:underline;
+}
+.pd-box {
+    padding: 15px;
+    padding-left: 6em;
+    min-height: 100px;
+	text-align: center;
+}
+.pd {
+	text-decoration:underline;
+}
+.d {
+	padding-top: 2em;
+	text-decoration:underline;
+}
+table.ean {
+	text-align:left;
+	font-family: monospace;
+	border: black 1px solid;
+	border-collapse: collapse;
+	width:80%;
+	margin: 0 auto;
+}
+table.ean td {
+	border-bottom: black 1px solid;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+table.ean td:first-child {
+	width:3em;
+}
+table.ean > tbody > tr:first-child > td:last-child {
+	text-align:right;
+}
+table.stop{
+	text-align:left;
+	font-family: monospace;
+	border-collapse: collapse;
+	width:80%;
+	margin: 0 auto;
+}
+table.stop td:first-child {
+	width:2.0em;
+}
+table.stop td:last-child {
+	border-bottom: black 1px solid;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+table.ean td:first-child {
+	width:3em;
+}
+.arrow-line.horizontal {
+    position: relative;
+    width: 80%;
+    height: 0px;
+    border-bottom: 2px dashed black;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arrow-line.horizontal::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+}
+
+/* ========================================= */
+/* 斜め矢印のスタイル */
+/* ========================================= */
+.arrow-diagonal-1 {
+    position: absolute;
+    top: calc(var(--grid-row-height) + 0.5em);
+    left: calc(var(--grid-column-width) - 40px);
+    width: calc(var(--grid-column-width) * 0.53);
+    height: 0;
+    border-bottom: 2px dashed black;
+    transform: rotate(65deg);
+    transform-origin: left top;
+    z-index: 10;
+}
+
+.arrow-diagonal-1::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+    transform-origin: center center;
+}
+
+.arrow-diagonal-2 {
+    position: absolute;
+    top: calc(var(--grid-row-height) * 2 + 1.5em);
+    left: calc(var(--grid-column-width) * 2 - 40px);
+
+    width: calc(var(--grid-column-width) * 0.52);
+    height: 0;
+    border-bottom: 2px dashed black;
+    transform: rotate(-65deg);
+    transform-origin: left top;
+    z-index: 10;
+}
+
+.arrow-diagonal-2::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+    transform-origin: center center;
+}
+div.guest {
+	margin-top:1em;
+}
+table.guest {
+	text-align:center;
+	font-family: monospace;
+	border: black 1px solid;
+	border-collapse: collapse;
+	width:100%;
+	margin: 0 auto;
+}
+table.guest tr:first-child > th:nth-child(1) {
+	width:16em;
+	border-right:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(2),
+table.guest tr:first-child > th:nth-child(3),
+table.guest tr:nth-child(2) > th:nth-child(4),
+table.guest tr:nth-child(2) > th:nth-child(5)
+{
+	width:4em;
+	border-right:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(4),
+table.guest tr:nth-child(2) > th:nth-child(1),
+table.guest tr:nth-child(2) > th:nth-child(2),
+table.guest tr:nth-child(2) > th:nth-child(3)
+{
+	border-right:1px solid black;
+}
+table.guest tr:nth-child(2) > th {
+	border-bottom:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(4){
+	border-bottom:1px solid black;
+}
+table.guest td {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
