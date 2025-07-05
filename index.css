@@ -5,6 +5,18 @@
 body {
 	margin-bottom:6em;
 }
+.textcenter {
+	text-align:center;
+}
+.textleft {
+	text-align:left;
+}
+.textright {
+	text-align:right;
+}
+.trance {
+	opacity: 0;
+}
 .date-container {
     display: grid;
     grid-template-columns: 10em 1fr 1fr;
@@ -112,7 +124,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0px;
-    width: 100%;
+    width: 1216px;
     margin: 0 auto;
 	padding-top:1em;
 	border-bottom: 1px solid black;
@@ -264,6 +276,10 @@ table.guest {
 	width:100%;
 	margin: 0 auto;
 }
+table.guest td {
+	padding-left:0.4em;
+	padding-right:0.4em;
+}
 table.guest tr:first-child > th:nth-child(1) {
 	width:16em;
 	border-right:1px solid black;
@@ -332,4 +348,17 @@ h3 {
   border-style:solid;
   border-color:silver;
   width:11.5em;
+}
+dl.loglist > dt {
+	font-weight:bold;
+}
+
+dl.loglist > dd > ul > li {
+	list-style:none;
+}
+div#notes p {
+	text-indent:1em;
+}
+div#notes p:first-child {
+	text-indent:0em;
 }
