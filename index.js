@@ -19,4 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+	const elementsToRemove = document.querySelectorAll('.remove');
+	elementsToRemove.forEach(element => {
+		element.remove();
+	});
 });
