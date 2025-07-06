@@ -388,3 +388,6 @@ div#notes p:first-child {
 .clear {
 	clear:both;
 }
+.external:after {
+  content:url('link-icon_external.gif');
+}
