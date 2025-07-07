@@ -391,3 +391,6 @@ div#notes p:first-child {
 .external:after {
   content:url('link-icon_external.gif');
 }
+.undisp {
+	display:none;
+}
