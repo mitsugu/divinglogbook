@@ -394,3 +394,43 @@ div#notes p:first-child {
 .undisp {
 	display:none;
 }
+.container {
+  overflow: auto;
+}
+figcaption {
+	font-size: 0.7em;
+}
+div.right > figure {
+  display: inline-block;
+  text-align: left;
+  width:512px;
+}
+
+div.right > figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+div.right > figure figcaption {
+  width: 100%;
+}
+/* figure 要素のスタイル（必要に応じて） */
+div.left::after {
+	clear:both;
+}
+div.left > figure {
+  display: inline-block;
+  text-align: left;
+  width:512px;
+}
+
+div.left > figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+div.left > figure figcaption {
+  width: 100%;
+}
