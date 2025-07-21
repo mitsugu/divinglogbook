@@ -68,8 +68,16 @@ min {
 	padding-left:0.2em;
 	padding-right:0.2em;
 }
-.data1 > div:nth-child(6) {
+.data1 > div:nth-child(6),
+.data1 > div:nth-child(23),
+.data1 > div:nth-child(40)
+{
 	text-align:left;
+}
+.data1 > div:nth-child(23),
+.data1 > div:nth-child(40)
+{
+	margin-left:1em;
 }
 .temp {
 	text-align:center;
@@ -288,6 +296,10 @@ table.guest td {
 	padding-left:0.4em;
 	padding-right:0.4em;
 }
+table.guest > tbody > tr:nth-child(n + 3) td:first-child,
+table.guest > tbody > tr:nth-child(n + 3) td:last-child {
+	text-align:left;
+}
 table.guest tr:first-child > th:nth-child(1) {
 	width:16em;
 	border-right:1px solid black;
@@ -433,4 +445,10 @@ div.left > figure img {
 
 div.left > figure figcaption {
   width: 100%;
+}
+.footnote{
+  margin-left:4em;
+  margin-right:4em;
+  color:gray;
+  /*font-size:0.75em;*/
 }
