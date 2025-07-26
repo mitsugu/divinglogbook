@@ -452,3 +452,9 @@ div.left > figure figcaption {
   color:gray;
   /*font-size:0.75em;*/
 }
+div#notes dt {
+	font-weight:bold;
+}
+div#notes dd > p:first-child {
+	text-indent:1em;
+}
