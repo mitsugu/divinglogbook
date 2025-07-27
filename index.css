@@ -412,6 +412,12 @@ div#notes p:first-child {
 figcaption {
 	font-size: 0.7em;
 }
+div.right::after {
+	clear:both;
+}
+div.left::after {
+	clear:both;
+}
 div.right > figure {
   display: inline-block;
   text-align: left;
