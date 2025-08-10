@@ -146,6 +146,10 @@ min {
     text-align: center;
     min-height: var(--grid-row-height);
 }
+.log-box:nth-child(6) > p.pd {
+	margin-left:1em;
+	margin-right:auto;
+}
 .memo-box > p {
 	text-indent:0em;
 }

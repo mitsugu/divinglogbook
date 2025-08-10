@@ -25,6 +25,8 @@
 	<meta name="twitter:image" content="https://mitsugu.github.io/divinglogbook/1998/fig1998062801.jpg" />
 
 	<link rel="stylesheet" type="text/css" href="../index.css">
+	<script defer src="../index.js"></script>
+	<script defer src="../profile.js"></script>
 	<script defer src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.2.0"></script>
 	<script defer src="https://cdn.jsdelivr.net/npm/nostr-zap@1.3.0"></script>
 </head>
@@ -102,7 +104,7 @@
 		<div class="box sign-data">&nbsp;</div>
 	</div>
 
-	<div class="diving-profile undisp">
+	<div class="diving-profile">
 		<div class="log-box">
 			<p class="lg">　　　</p>
 			<p class="sit">　　：　　</p>
@@ -172,8 +174,7 @@
 			</tbody>
 			</table>
 		</div>
-		<div class="arrow-diagonal-1"></div>
-		<div class="arrow-diagonal-2"></div>
+		<svg id="arrow-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></svg>
 	</div>
 	<div class="guest">
 		<table class="guest">
@@ -238,7 +239,7 @@
 			</dd>
 			<dt>私信:</dt>
 			<dd>
-				<p>J.N. ちゃん、ごめんね。本当にごめん。自分が担当の日にあんなことされたら、血の気引くよね？</p>
+				<p>ジュンちゃん、ごめんね。本当にごめん。自分が担当の日にあんなことされたら、血の気引くよね？</p>
 				<p>N.I.くんもほんとごめん。ぼくが手を抜きさえしなければ、あんなことにならなかったのに。君のせいじゃないからね。君になんの責任もない。本当にあれはぼくのせい。現役のアシスタント・インストラクターのくせに雑なことをしたぼく自身の責任。ショックから立ち直ってくれてたら嬉しい。</p>
 			</dd>
 			<!--
