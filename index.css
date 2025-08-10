@@ -137,7 +137,6 @@ min {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0px;
-    width: 1216px;
     margin: 0 auto;
 	padding-top:1em;
 	border-bottom: 1px solid black;
@@ -228,59 +227,6 @@ table.ean td:first-child {
     border-left: 8px solid black;
 }
 
-/* ========================================= */
-/* 斜め矢印のスタイル */
-/* ========================================= */
-.arrow-diagonal-1 {
-    position: absolute;
-    top: calc(var(--grid-row-height) + 0.5em);
-    left: calc(var(--grid-column-width) - 40px);
-    width: calc(var(--grid-column-width) * 0.53);
-    height: 0;
-    border-bottom: 2px dashed black;
-    transform: rotate(65deg);
-    transform-origin: left top;
-    z-index: 10;
-}
-
-.arrow-diagonal-1::after {
-    content: '';
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 8px solid black;
-    transform-origin: center center;
-}
-
-.arrow-diagonal-2 {
-    position: absolute;
-    top: calc(var(--grid-row-height) * 2 + 1.5em);
-    left: calc(var(--grid-column-width) * 2 - 40px);
-
-    width: calc(var(--grid-column-width) * 0.52);
-    height: 0;
-    border-bottom: 2px dashed black;
-    transform: rotate(-65deg);
-    transform-origin: left top;
-    z-index: 10;
-}
-
-.arrow-diagonal-2::after {
-    content: '';
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 8px solid black;
-    transform-origin: center center;
-}
 div.guest {
 	margin-top:1em;
 }
