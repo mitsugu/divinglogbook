@@ -14,6 +14,18 @@ body {
 .textright {
 	text-align:right;
 }
+.tabbed-text {
+	white-space: pre-wrap;
+}
+.min-indent {
+	text-indent:1em;
+}
+.like-tabbed {
+	text-indent:2em;
+}
+.red {
+	color:red;
+}
 .trance {
 	opacity: 0;
 }
@@ -155,9 +167,11 @@ min {
 }
 .lg {
 	text-decoration:underline;
+	white-space: pre-wrap;
 }
 .sit {
 	text-decoration:underline;
+	white-space: pre-wrap;
 }
 .pd-box {
     padding: 15px;
@@ -167,10 +181,12 @@ min {
 }
 .pd {
 	text-decoration:underline;
+	white-space: pre-wrap;
 }
 .d {
 	padding-top: 2em;
 	text-decoration:underline;
+	white-space: pre-wrap;
 }
 table.ean {
 	text-align:left;
