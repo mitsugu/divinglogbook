@@ -1,0 +1,439 @@
+:root {
+    --grid-column-width: 25vw;
+    --grid-row-height: 20vmin;
+}
+body {
+	margin-top:3em;
+	margin-bottom:6em;
+	padding-left:3em;
+	padding-right:3em;
+}
+.textcenter {
+	text-align:center;
+}
+.textleft {
+	text-align:left;
+}
+.textright {
+	text-align:right;
+}
+.tabbed-text {
+	white-space: pre-wrap;
+}
+.min-indent {
+	text-indent:1em;
+}
+.like-tabbed {
+	text-indent:2em;
+}
+.red {
+	color:red;
+}
+.trance {
+	opacity: 0;
+}
+.date-container {
+    display: grid;
+    grid-template-columns: 10em 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    margin: 0 auto; /* 中央寄せ */
+}
+/* 各ボックスの基本スタイル */
+.box {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+.top-left-box {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.top-middle-box {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.bottom-left-box {
+	border-right:1px solid black;
+}
+.bottom-middle-box {
+	border-right:1px solid black;
+}
+/* 上部の横長の箱 */
+.top-box {
+    grid-column: 1 / span 2;
+}
+/* 下の左側の箱 */
+.bottom-left-box {
+    grid-column: 1;
+}
+.bottom-right-box {
+    grid-column: 2;
+}
+
+min {
+	font-size:0.8em;
+}
+.data1 {
+    display: grid;
+    grid-template-columns: 3em 3em 3em 3em 3em 3em 3em 3em 3em 6em 3em 3em 3em 3em 3em 3em 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+	padding-left:0.2em;
+	padding-right:0.2em;
+}
+.data1 > div:nth-child(6),
+.data1 > div:nth-child(23),
+.data1 > div:nth-child(40)
+{
+	text-align:left;
+}
+.data1 > div:nth-child(23),
+.data1 > div:nth-child(40)
+{
+	padding-left:1em;
+}
+.temp {
+	text-align:center;
+    grid-column: 1 / span 3;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.temp-title {
+	border-right: 1px solid black;
+	text-align:center;
+}
+.temp-data {
+	border-right: 1px solid black;
+	text-align:center;
+	border-bottom: 1px solid black;
+}
+.temp-signature {
+	border-bottom: 1px solid black;
+}
+/*
+.temp-unit{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align:right;
+}
+*/
+.vis{
+	text-align:center;
+    grid-column: 4 / span 3;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.bar {
+	text-align:center;
+    grid-column: 7 / span 4;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.depth {
+	text-align:center;
+    grid-column: 11 / span 2;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.time {
+	text-align:center;
+    grid-column: 13 / span 4;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.sign{
+	text-align:center;
+    grid-column: 17 / span 1;
+	border-bottom: 1px solid black;
+}
+.sign-data {
+	border-bottom: 1px solid black;
+}
+
+/* ダイビングプロファイル */
+.diving-profile {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    margin: 0 auto;
+	padding-top:1em;
+	border-bottom: 1px solid black;
+}
+.log-box, .pd-box {
+    padding: 15px;
+    text-align: center;
+    min-height: var(--grid-row-height);
+}
+.log-box:nth-child(6) > p.pd {
+	margin-left:1em;
+	margin-right:auto;
+}
+.memo-box > p {
+	text-indent:0em;
+}
+.lg {
+	text-decoration:underline;
+	white-space: pre-wrap;
+}
+.sit {
+	text-decoration:underline;
+	white-space: pre-wrap;
+}
+.pd-box {
+    padding: 15px;
+    padding-left: 6em;
+    min-height: 100px;
+	text-align: center;
+}
+.pd {
+	text-decoration:underline;
+	white-space: pre-wrap;
+}
+.d {
+	padding-top: 2em;
+	text-decoration:underline;
+	white-space: pre-wrap;
+}
+table.ean {
+	text-align:left;
+	font-family: monospace;
+	border: black 1px solid;
+	border-collapse: collapse;
+	width:80%;
+	margin: 0 auto;
+}
+table.ean td {
+	border-bottom: black 1px solid;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+table.ean td:first-child {
+	width:3em;
+}
+table.ean > tbody > tr:first-child > td:last-child {
+	text-align:right;
+}
+table.stop{
+	text-align:left;
+	font-family: monospace;
+	border-collapse: collapse;
+	width:80%;
+	margin: 0 auto;
+}
+table.stop td:first-child {
+	width:2.0em;
+}
+table.stop td:last-child {
+	border-bottom: black 1px solid;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+table.ean td:first-child {
+	width:3em;
+}
+.arrow-line.horizontal {
+    position: relative;
+    width: 80%;
+    height: 0px;
+    border-bottom: 2px dashed black;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arrow-line.horizontal::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+}
+
+div.guest {
+	margin-top:1em;
+}
+table.guest {
+	text-align:center;
+	font-family: monospace;
+	border: black 1px solid;
+	border-collapse: collapse;
+	width:100%;
+	margin: 0 auto;
+}
+table.guest td {
+	padding-left:0.4em;
+	padding-right:0.4em;
+}
+table.guest > tbody > tr:nth-child(n + 3) td:first-child,
+table.guest > tbody > tr:nth-child(n + 3) td:last-child {
+	text-align:left;
+}
+table.guest tr:first-child > th:nth-child(1) {
+	width:16em;
+	border-right:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(2),
+table.guest tr:first-child > th:nth-child(3),
+table.guest tr:nth-child(2) > th:nth-child(4),
+table.guest tr:nth-child(2) > th:nth-child(5),
+table.guest tr:nth-child(2) > th:nth-child(6)
+{
+	width:4em;
+	border-right:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(4),
+table.guest tr:first-child > th:nth-child(5),
+table.guest tr:nth-child(2) > th:nth-child(1),
+table.guest tr:nth-child(2) > th:nth-child(2),
+table.guest tr:nth-child(2) > th:nth-child(3)
+{
+	border-right:1px solid black;
+}
+table.guest tr:nth-child(2) > th {
+	border-bottom:1px solid black;
+}
+table.guest tr:first-child > th:nth-child(4){
+	border-bottom:1px solid black;
+}
+table.guest td {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+a:link {
+  color:dodgerblue;
+}
+body {
+  margin-bottom:4em;
+}
+#contents {
+  line-height:1.5em;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:4em;
+}
+p {
+  text-align:justify;
+  text-indent:1em;
+}
+p.mid-flow, p.no-indent {
+  text-indent:0em!important;
+}
+h1 {
+	margin:0px;
+	padding:0px;
+	font-size:1em;
+	font-weight: normal;
+}
+h2 {
+	font-weight: bold;
+}
+h3 {
+	font-weight: bold;
+}
+dl.loglist > dt {
+	font-weight:bold;
+}
+
+dl.loglist > dd > ul > li {
+	list-style:none;
+}
+div#notes p {
+	text-indent:1em;
+}
+div#notes.title {
+	text-indent:0em;
+}
+.loglist dd {
+    display: none;
+}
+.loglist dt {
+    cursor: pointer;
+}
+.loglist dd.active {
+    display: block;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+.external:after {
+  content:url('link-icon_external.gif');
+}
+.undisp {
+	display:none;
+}
+.container {
+  overflow: auto;
+}
+figcaption {
+	font-size: 0.7em;
+}
+div.right::after {
+	clear:both;
+}
+div.left::after {
+	clear:both;
+}
+div.right > figure {
+  display: inline-block;
+  text-align: left;
+  width:512px;
+}
+
+div.right > figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+div.right > figure figcaption {
+  width: 100%;
+}
+/* figure 要素のスタイル（必要に応じて） */
+div.left::after {
+	clear:both;
+}
+div.left > figure {
+  display: inline-block;
+  text-align: left;
+  width:512px;
+}
+
+div.left > figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+div.left > figure figcaption {
+  width: 100%;
+}
+.footnote{
+  margin-left:4em;
+  margin-right:4em;
+  color:gray;
+  /*font-size:0.75em;*/
+}
+div#notes dt {
+	font-weight:bold;
+}
+div#notes dd > p:first-child {
+	text-indent:1em;
+}
+.nomark {
+  list-style-type:none;
+}
