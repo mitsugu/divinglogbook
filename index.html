@@ -27,8 +27,8 @@
 
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script defer src="index.js" defer></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.2.0"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/nostr-zap@1.3.0"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.3.4"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/nostr-zap@1.3.2"></script>
 	<style>
 		.left {
 			float:left;
@@ -49,10 +49,18 @@
 		<p>このサイトはぼくが html でつくったダイビングのログブックのテンプレートを配布するためのサイトです。</p>
 		<p>テンプレート自体は github.com で公開しており、その使用サンプルとしてぼく自身のログブックをこのサイトで公開しています。html なのでご自身の Web サイトに組み込んだり、単にログブックの電子化に利用することなどができます。</p>
 
-		<h2>テンプレートを使用する場合</h2>
+		<h2>テンプレートを利用する場合</h2>
 		<ul>
-		<li><a href="https://github.com/mitsugu/divinglogbook" target="_blank">ソースリポジトリ</a>から template.html と index.css、index.js、profile.js、tippy.css、tippy.js をダウンロードしてご利用ください。</li>
-		<li><a href="https://mitsugu.github.io/divinglogbook/template.html" target="_blank">テンプレート</a>の表示</li>
+		<li>このテンプレートはテキストエディタで html をポチポチと入力するのが好きな人向けのものになります。</li>
+		<li>このテンプレートを利用するのに必要な技能は html、CSS、JavaScript が読め、テキストエディタで html を編集できることです。</li>
+		<li>html 内のファイルパスは、ご自身のサーバー上での構成に合わせてご自身で変更してください。</li>
+		<li><a href="https://github.com/mitsugu/divinglogbook" target="_blank">ソースリポジトリ</a>から html、css、Javascript の全ファイルをダウンロードしてご利用ください。</li>
+		<li>本体 css の最新版は index2026.css です。index.css に手を加えたものです。後方互換性を維持できなかったので別ファイルにしました。</li>
+		<li><a href="template.html" target="_blank">テンプレート</a>の表示</li>
+		<li>html 用プラグインツールとして拙作 <a href="https://github.com/mitsugu/htmltools/tree/main/image%20unit" class="external" target="_blank">image-unit</a> を加えています。画像の左右への振り分けと文字列の回り込みをサポートします。画像のディスプレイ上の最大化表示もサポートします。</li>
+		<li>リッチ tooltip ツールとして atomiks 氏の <a href="https://atomiks.github.io/tippyjs/" class="external" target="_blank">Tippy.js</a> を加えています。</li>
+		<li>現在の最新 html、css、JavaScript を反映させているサンプルは &quot;<a href="https://github.com/mitsugu/divinglogbook/blob/main/2026/2026100801.html" class="external" target="_blank">#246 2026/10/08 兵庫県神戸市 須磨浦海岸</a>&quot; になります。</li>
+		<li>サンプル &quot;<a href="https://github.com/mitsugu/divinglogbook/blob/main/2026/2026100801.html" class="external" target="_blank">#246 2026/10/08 兵庫県神戸市 須磨浦海岸</a>&quot; からダイブテーブルの利用を前提とすダイブプロフィール欄はデフォルトで非表示にしています。使いたい場合は <code>&lt;div class=&quot;diving-profile undisp&quot;&gt;</code> を <code>&lt;div class=&quot;diving-profile&quot;&gt;</code> に変更してください。</li>
 		</ul>
 
 		<div>
@@ -415,19 +423,41 @@
 			<li><a href="2025/2025092303.html">#245 2025/09/23 和歌山県串本町 備前</a></li>
 			</ul>
 		</dd>
+
+		<dt>2026</dt>
+		<dd>
+			<ul>
+			<li><a href="2026/2026100801.html">#246 2026/10/08 兵庫県神戸市 須磨浦海岸</a></li>
+			</ul>
+		</dd>
 		</dl>
 
 	</div>
 
 	<ul class="nomark">
-		<li><span class="makibishi" data-relays="wss://nrelay-jp.c-stellar.net,wss://nrelay.c-stellar.net,wss://r.kojira.io,wss://relay-jp.nostr.wirednet.jp,wss://relay.nostr.band/,wss://relay.nostr.wirednet.jp,wss://yabu.me" data-url="https://mitsugu.github.io/divinglogbook/" data-content="⭐" data-allow-anonymous-reaction="true"></span>&nbsp;
-			<button data-npub="npub1f3vjqsxrnv7g6fauy5kakcfh4ftmcvk3qd29de8u43qpc2f69g8ss3zlfs" data-relays="wss://nrelay-jp.c-stellar.net,wss://nrelay.c-stellar.net,wss://r.kojira.io,wss://relay-jp.nostr.wirednet.jp,wss://relay.nostr.band/,wss://relay.nostr.wirednet.jp,wss://yabu.me" title="Bitcoin 投げ銭">Zap ⚡️</button>
+		<li>
+			<span
+				class="makibishi"
+				data-relays="wss://nrelay-jp.c-stellar.net,wss://nrelay.c-stellar.net,wss://r.kojira.io,wss://relay-jp.nostr.wirednet.jp,wss://relay.nostr.band/,wss://relay.nostr.wirednet.jp,wss://yabu.me"
+				data-url="https://mitsugu.github.io/divinglogbook/"
+				data-content="⭐"
+				data-allow-anonymous-reaction="true"
+				data-allow-to-delete-reaction="true"
+			>
+			</span>
+			&nbsp;
+			<button
+				type="button"
+				data-npub="npub1czyqt7dafpysfye9w3agpp4rcrsxnt0tr8v0t8kyu66327maxstq5ckh7u"
+				data-relays="wss://nrelay-jp.c-stellar.net,wss://nrelay.c-stellar.net,wss://r.kojira.io,wss://relay-jp.nostr.wirednet.jp,wss://relay.nostr.band/,wss://relay.nostr.wirednet.jp,wss://yabu.me"
+				title="Bitcoin 投げ銭">Zap ⚡️
+			</button>
 		</li>
 	</ul>
 </body>
 
 </html>
 <!--
-vim: ts=2 sw=2 noet
+vim: ts=3 sw=3 noet
 -->
 
